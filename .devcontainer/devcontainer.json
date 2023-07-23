@@ -1,0 +1,16 @@
+// devcontainer.json
+{
+  "name": "Python Codespace",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "runArgs": [
+    "--mount=type=bind,source=${localWorkspaceFolder},target=/workspace,readonly"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,readonly"
+}
